@@ -69,6 +69,10 @@ class Cli {
         if (answers.vehicleType === 'Car') {
           // create a car
           this.createCar();
+        } else if (answers.vehicleType === 'Truck') {
+          this.createTruck();
+        } else if (answers.vehicleType === 'Motorbike'){
+          this.createMotorbike();
         }
         // TODO: add statements to create a truck or motorbike if the user selects the respective vehicle type
       });
@@ -291,7 +295,7 @@ class Cli {
           console.log('The truck cannot tow itself!')
           this.performActions()
         } else {
-          console.log(`The ${answers.make} ${answers.model} has been towed.`)
+          vehicle.tow(answers)
           this.performActions()
         }
         // TODO: check if the selected vehicle is the truck
