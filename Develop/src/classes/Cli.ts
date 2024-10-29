@@ -395,9 +395,8 @@ class Cli {
                 this.findVehicleToTow(this.vehicles[i] as Truck);
                 return;
               }
-            } else {
+             else
               console.log('Please choose a truck!');
-              this.performActions()
             }
 
           }
@@ -409,9 +408,9 @@ class Cli {
               if (this.vehicles[i] instanceof Motorbike) {
                 (this.vehicles[i] as Motorbike).wheelie();
               }
-            } else {
+             else {
               console.log('This vehicle cannot do a wheelie!');
-            }
+            }}
           }
         }
         else if (answers.action === 'Select or create another vehicle') {
